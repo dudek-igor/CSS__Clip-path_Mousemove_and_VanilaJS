@@ -6,5 +6,18 @@
     <title>Clip-path, Mousemove and VanilaJS</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <section>
+      <h2>Hello</h2>
+      <h2>World</h2>
+      <div class="circle"></div>
+    </section>
+    <script type="text/javascript">
+      const pos = document.documentElement;
+      pos.addEventListener("mousemove", (e) => {
+        pos.style.setProperty("--x", `${e.clientX}px`);
+        pos.style.setProperty("--y", `${e.clientY}px`);
+      });
+    </script>
+  </body>
 </html>
